@@ -13,7 +13,7 @@ import Skills from './components/Skills';
 import Hobbies from './components/Hobbies';
 import Referees from './components/Referees';
 import Footer from './components/Footer';
-import { FaHtml5, FaCss3Alt, FaJsSquare } from 'react-icons/fa';
+import { FaSun, FaMoon } from 'react-icons/fa';
 
 
 const SectionWrapper = styled.div`
@@ -27,15 +27,18 @@ const AltBackground = styled.div`
 `;
 
 
-const IconGroup = styled.div`
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  margin: 20px 0;
-`;
-
-
 const ToggleButton = styled.button`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: 'LXGW WenKai Mono TC', sans-serif;
+    font-size: 1.0rem;
+
+    svg {
+      font-size: 1.0rem;
+    }
+
     width: 100%;
     margin-right: 10px;
     margin-top: 4px;
@@ -50,6 +53,7 @@ const ToggleButton = styled.button`
 
     &: hover {
       box-shadow: 0 15px 15px rgba(0, 0, 0, 0.16);
+      color: ${({ theme }) => theme.toggleHover};
     }
 `;
 
@@ -65,13 +69,8 @@ function App() {
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
     <GlobalStyles />
     <ToggleButton onClick={toggleTheme}>
-      Switch to {isDarkMode ? 'Light' : 'Dark'} Mode
+      {isDarkMode ? <><FaSun /> Light Mode</> : <><FaMoon /> Dark Mode</>} Mode
     </ToggleButton>
-    <IconGroup>
-      <FaHtml5 size={30} />
-      <FaCss3Alt size={30} />
-      <FaJsSquare size={30} />
-    </IconGroup>
     <Header />
     <SectionWrapper>
       <AltBackground>
@@ -109,15 +108,17 @@ function App() {
       </CollapsibleSection>
     </SectionWrapper>
     <SectionWrapper>
-      <CollapsibleSection title="Referees">
-      <Referees />
-      </CollapsibleSection>
+      <AltBackground>
+        <CollapsibleSection title="Referees">
+        <Referees />
+        </CollapsibleSection>
+      </AltBackground>
     </SectionWrapper>
-    <Footer
-      toggleTheme={toggleTheme}
-      isDarkMode={isDarkMode}
-      ToggleButton={ToggleButton}
-    />
+      <Footer
+        toggleTheme={toggleTheme}
+        isDarkMode={isDarkMode}
+        ToggleButton={ToggleButton}
+      />
   </ThemeProvider>
   );
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 
 const SectionWrapper = styled.div`
@@ -13,11 +14,11 @@ const ToggleButton = styled.h2`
     cursor: pointer;
     margin: 100px;
     padding: 20px 0;
-    text-align: left;
+    text-align: center;
     font-family: 'LXGW WenKai Mono TC', sans-serif;
 
     &:hover {
-        color: ${({ theme }) => theme.highlight};
+        color: ${({ theme }) => theme.toggleHover};
     }
 `;
 
@@ -37,7 +38,7 @@ function CollapsibleSection({ title, children }) {
     return (
         <SectionWrapper>
             <ToggleButton onClick={() => setIsOpen(!isOpen)}>
-                {title}
+                {title} {isOpen ? <FaChevronUp /> : <FaChevronDown />}
             </ToggleButton>
             <Content isOpen={isOpen}>
                 {children}

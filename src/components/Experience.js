@@ -26,7 +26,7 @@ const Job = styled.div`
 
 
 const Heading = styled.h2`
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-family: 'Amatic SC', sans-serif;
     margin-bottom: 50px;
     text-align: center;
@@ -34,7 +34,7 @@ const Heading = styled.h2`
 
 
 const SubHeading = styled.h3`
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     font-family: 'Amatic SC', sans-serif;
     margin-bottom: 20px;
     text-align: left;
@@ -44,6 +44,9 @@ const SubHeading = styled.h3`
 
 const Paragraph = styled.section`
     font-size: 1.5rem;
+      @media (max-width: 768px) {
+        font-size: 1.1rem;
+    }
     font-family: 'LXGW WenKai Mono TC'; sans-serif;
     line-height: 2.0;
     text-align: justify;
@@ -61,6 +64,9 @@ const ListItem = styled.li`
     text-align: justify;
     font-family: 'LXGW WenKai Mono TC', sans-serif;
     font-size: 1.25rem;
+      @media (max-width: 768px) {
+        font-size: 1.0rem;
+    }
     line-height: 2.0;
 `;
 

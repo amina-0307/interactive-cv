@@ -20,7 +20,7 @@ const Highlight = styled.span`
 
 
 const Heading = styled.h2`
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     margin-bottom: 50px;
     text-align: center;
     font-family: 'Amatic SC', sans-serif;
@@ -28,6 +28,9 @@ const Heading = styled.h2`
 
 const Paragraph = styled.p`
     font-size: 1.5rem;
+    @media (max-width: 768px) {
+        font-size: 1.1rem;
+    }
     font-family: 'LXGW WenKai Mono TC', sans-serif;
     line-height: 2.0;
     text-align: justify;
