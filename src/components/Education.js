@@ -19,14 +19,6 @@ const Highlight = styled.span`
 `;
 
 
-const Heading = styled.h2`
-    font-size: 2.5rem;
-    font-family: 'Amatic SC', sans-serif;
-    margin-bottom: 50px;
-    text-align: center;
-`;
-
-
 const SubHeading = styled.h3`
     font-size: 2.0rem;
     font-family: 'Amatic SC', sans-serif;
@@ -86,9 +78,6 @@ const SubListItem = styled.li`
 function Education() {
     return (
         <EducationSection>
-            <Heading>
-                <Highlight>Education and Qualifications</Highlight>
-                </Heading>
             <SubHeading>MSc Medical Bioscience (Merit)</SubHeading>
             <Paragraph>University of Bradford | Sept 2022 - Sept 2023</Paragraph>
             <List>
@@ -112,12 +101,17 @@ function Education() {
             <SubHeading>A Levels (AQA)</SubHeading>
             <Paragraph>Clitheroe Royal Grammar School and Sixth Form | Sept 2017 - Aug 2019</Paragraph>
             <List>
-                <ListItem>4A, 7B</ListItem>
+                <ListItem>1B, 3D</ListItem>
             </List>
             <SubHeading>GCSE's</SubHeading>
             <Paragraph>Clitheroe Royal Grammar School | Sept 2012 - Aug 2017</Paragraph>
             <List>
                 <ListItem>4A, 7B</ListItem>
+                <SubList>
+                    <SubListItem>* Mathematics - 6/B</SubListItem>
+                    <SubListItem>* English Language - 7/A</SubListItem>
+                    <SubListItem>* English Literature - 7/A</SubListItem>
+                </SubList>
             </List>
         </EducationSection>
     );

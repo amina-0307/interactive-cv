@@ -25,14 +25,6 @@ const Job = styled.div`
 `;
 
 
-const Heading = styled.h2`
-    font-size: 2.5rem;
-    font-family: 'Amatic SC', sans-serif;
-    margin-bottom: 50px;
-    text-align: center;
-`;
-
-
 const SubHeading = styled.h3`
     font-size: 2.0rem;
     font-family: 'Amatic SC', sans-serif;
@@ -74,9 +66,6 @@ const ListItem = styled.li`
 function Experience() {
     return (
         <ExperienceSection>
-            <Heading>
-                <Highlight>Work Experience + Employment</Highlight>
-                </Heading>
             <Job>
                 <SubHeading>Clitheroe Royal Grammar School and Sixth Form</SubHeading>
                 <Paragraph>Science Technician | Clitheroe (2 Dec 2024 - Present, term-time)</Paragraph>
@@ -109,7 +98,7 @@ function Experience() {
                 <Paragraph>Retail Customer Service Assistant | Colne (28 Aug 2019 - 17 Jun 2023)</Paragraph>
                 <List>
                     <ListItem>Handled customer queries and complaints efficiently and professionally, maintaining high customer service standards</ListItem>
-                    <ListItem>positive contribution to the customer service team, maintaining high levels of energy and enthusiasm for positive customer interactions</ListItem>
+                    <ListItem>Positive contribution to the customer service team, maintaining high levels of energy and enthusiasm for positive customer interactions</ListItem>
                     <ListItem>Promoted products and stock on till banks</ListItem>
                     <ListItem>Improved communication and problem-solving skills</ListItem>
                 </List>

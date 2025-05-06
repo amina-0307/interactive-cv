@@ -9,24 +9,6 @@ const AwardsSection = styled.section`
 `;
 
 
-const Highlight = styled.span`
-    background-color: ${({ theme }) => theme.highlightBackground};
-    color: ${({ theme }) => theme.highlightText};
-    padding: 0.2em 0.4em;
-    border-radius: 4px;
-    font-weight: bold;
-    box-shadow: 0 0 10px ${({ theme }) => theme.highlight};
-`;
-
-
-const Heading = styled.h2`
-    font-size: 2.5rem;
-    font-family: 'Amatic SC', sans-serif;
-    margin-bottom: 50px;
-    text-align: center;
-`;
-
-
 const Paragraph = styled.section`
     font-size: 1.5rem;
       @media (max-width: 768px) {
@@ -60,9 +42,6 @@ const ListItem = styled.li`
 function Awards() {
     return (
         <AwardsSection>
-            <Heading>
-                <Highlight>Awards and Acknowledgements</Highlight>
-                </Heading>
             <Paragraph>Clitheroe Royal Grammar School and Sixth Form</Paragraph>
             <List>
                 <ListItem>AQA Baccalaureate (PASS)</ListItem>

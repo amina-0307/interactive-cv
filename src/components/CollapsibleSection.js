@@ -12,10 +12,20 @@ const SectionWrapper = styled.div`
 const ToggleButton = styled.h2`
     font-size: 2rem;
     cursor: pointer;
-    margin: 100px;
-    padding: 20px 0;
+    margin: 100px auto;
+    padding: 20px 40px;
     text-align: center;
     font-family: 'LXGW WenKai Mono TC', sans-serif;
+    width: fit-content;
+    border: none;
+    border-radius: 8px;
+    box-shadow: ${({ isOpen }) =>
+        isOpen ? '0 4px 10px rgba(0, 0, 0, 0.2)' : 'none'};
+    background-color: ${({ isOpen, theme }) =>
+        isOpen ? theme.highlightBackground : 'transparent'};
+    color: ${({ isOpen, theme }) =>
+        isOpen ? theme.highlightText : theme.text};
+    transition: all 0.3s ease-in-out;
 
     &:hover {
         color: ${({ theme }) => theme.toggleHover};
@@ -37,7 +47,7 @@ function CollapsibleSection({ title, children }) {
 
     return (
         <SectionWrapper>
-            <ToggleButton onClick={() => setIsOpen(!isOpen)}>
+            <ToggleButton onClick={() => setIsOpen(!isOpen)} isOpen={isOpen}>
                 {title} {isOpen ? <FaChevronUp /> : <FaChevronDown />}
             </ToggleButton>
             <Content isOpen={isOpen}>

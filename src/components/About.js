@@ -9,23 +9,6 @@ const AboutSection = styled.section`
 `;
 
 
-const Highlight = styled.span`
-    background-color: ${({ theme }) => theme.highlightBackground};
-    color: ${({ theme }) => theme.highlightText};
-    padding: 0.2em 0.4em;
-    border-radius: 4px;
-    font-weight: bold;
-    box-shadow: 0 0 10px ${({ theme }) => theme.highlight};
-`;
-
-
-const Heading = styled.h2`
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-    text-align: center;
-    font-family: 'Amatic SC', sans-serif;
-`;
-
 const Paragraph = styled.p`
     font-size: 1.5rem;
     @media (max-width: 768px) {
@@ -40,9 +23,6 @@ const Paragraph = styled.p`
 function About() {
     return (
         <AboutSection>
-            <Heading>
-                <Highlight>A Little About Me</Highlight>
-            </Heading>
             <Paragraph>
                 Hello! Welcome to my Interactive CV. I am passionate about creating user-friendly web applications and bringing designs to life.
             </Paragraph>

@@ -10,20 +10,11 @@ const SummarySection = styled.section`
 
 
 const Highlight = styled.span`
-    background-color: ${({ theme }) => theme.highlightBackground};
-    color: ${({ theme }) => theme.highlightText};
-    padding: 0.2em 0.4em;
-    border-radius: 4px;
-    font-weight: bold;
-    box-shadow: 0 0 10px ${({ theme }) => theme.highlight};
-`;
-
-
-const Heading = styled.h2`
-    font-size: 2.5em;
+    font-size: 2.0rem;
     font-family: 'Amatic SC', sans-serif;
-    margin-bottom: 50px;
-    text-align: center;
+    margin-bottom: 20px;
+    text-align: left;
+    background-color: ${({ theme }) => theme.highlightBackground};  
 `;
 
 
@@ -68,9 +59,6 @@ const ListItem = styled.li`
 function Summary() {
     return (
         <SummarySection>
-            <Heading>
-                <Highlight>Professional Summary</Highlight>
-                </Heading>
             <Paragraph>
                 During my academic journey, I had the privilege of engaging in diverse research projects that allowed me to explore the intricacies of molecular biology and microbiology.
             </Paragraph>
@@ -81,7 +69,7 @@ function Summary() {
                 I am actively learning Front-End Development (HTML, CSS, and JavaScript) and exploring the fundamentals of coding and programming, with plans to expand into Back-End Development and Machine Learning. My academic background has already equipped me with strong data handling skills, structured problem-solving, and logical reasoning - all of which I am now applying in tech.
             </Paragraph>
             <Paragraph>
-                As a highly motivated individual withh a solid foundation in microbiology and molecular biology techniques, I bring problem-solving abilities and a creative mindset to every challenge. Throughout my academic journey, I was also the go-to person for peers needing support during research projects, highlighting my collaborative nature and strong communication skills.
+                As a highly motivated individual with a solid foundation in microbiology and molecular biology techniques, I bring problem-solving abilities and a creative mindset to every challenge. Throughout my academic journey, I was also the go-to person for peers needing support during research projects, highlighting my collaborative nature and strong communication skills.
             </Paragraph>
             <Paragraph>
                 My skillset includes bacterial and mammalian cell culture, along with molecular biology techniques, such as RNA extraction, cDNA synthesis, and qPCR. With a keen eye for detail, I am proficient in accurately recording and intereting data - an ability I believe is just as valuable in the IT field.
