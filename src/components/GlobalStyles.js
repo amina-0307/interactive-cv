@@ -10,6 +10,7 @@ export const GlobalStyles = createGlobalStyle`
         transition: all 0.25s linear;
         margin: 0;
         padding: 0;
+        overflow-x: hidden;
     }
     * {
     box-sizing: border-box;

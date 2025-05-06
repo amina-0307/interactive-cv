@@ -1,3 +1,4 @@
+import CollapsibleSection from './components/CollapsibleSection';
 import React, { useState } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './components/theme';
@@ -74,27 +75,43 @@ function App() {
     <Header />
     <SectionWrapper>
       <AltBackground>
+        <CollapsibleSection title="A Little About Me">
         <About />
+        </CollapsibleSection>
+        <CollapsibleSection title="Professional Summary">
         <Summary />
+        </CollapsibleSection>
       </AltBackground>
     </SectionWrapper>
     <SectionWrapper>
+      <CollapsibleSection title="Work Experience + Employment">
       <Experience />
+      </CollapsibleSection>
     </SectionWrapper>
     <SectionWrapper>
       <AltBackground>
+        <CollapsibleSection title="Education and Qualifications">
         <Education />
+        </CollapsibleSection>
+        <CollapsibleSection title="Awards and Acknowledgements">
         <Awards />
+        </CollapsibleSection>
       </AltBackground>
     </SectionWrapper>
     <SectionWrapper>
+      <CollapsibleSection title="Skills">
       <Skills />
+      </CollapsibleSection>
     </SectionWrapper>
     <SectionWrapper>
+      <CollapsibleSection title="Hobbies and Interests">
       <Hobbies />
+      </CollapsibleSection>
     </SectionWrapper>
     <SectionWrapper>
+      <CollapsibleSection title="Referees">
       <Referees />
+      </CollapsibleSection>
     </SectionWrapper>
     <Footer
       toggleTheme={toggleTheme}

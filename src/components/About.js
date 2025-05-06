@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 
 
-//Scroll animation
-const AboutSection = styled(motion.section)`
+const AboutSection = styled.section`
     padding: 60px 20px;
     max-width: 1100px;
     margin: 0 auto;
@@ -38,12 +36,7 @@ const Paragraph = styled.p`
 
 function About() {
     return (
-        <AboutSection
-            initial={{ opacity: 0, y: 50 }} //where it starts
-            whileInView={{ opacity: 1, y: 0 }} //where it ends when visible
-            transition={{ duration: 0.8 }} //how long it takes
-            viewport={{ once: true, amount: 0.3 }} //triggers when 30% is visible
-        >
+        <AboutSection>
             <Heading>
                 <Highlight>A Little About Me</Highlight>
             </Heading>
