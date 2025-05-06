@@ -1,0 +1,99 @@
+import React from 'react';
+import styled, { keyframes } from 'styled-components';
+
+
+//FadeIn animation
+const fadeIn = keyframes`
+    from {
+    opacity: 0;
+    transform: translateY(20px);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+`;
+
+
+const RefereesSection = styled.section`
+    padding: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    animation: ${fadeIn} 2s ease-out;
+`;
+
+
+const Highlight = styled.span`
+    background-color: ${({ theme }) => theme.highlightBackground};
+    color: ${({ theme }) => theme.highlightText};
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-weight: bold;
+    box-shadow: 0 0 10px ${({ theme }) => theme.highlight};
+`;
+
+
+const Heading = styled.h2`
+    font-size: 3.5rem;
+    font-family: 'Amatic SC', sans-serif;
+    margin-bottom: 50px;
+    text-align: center;
+`;
+
+
+const List = styled.ul`
+    padding-left: 20px;
+    margin-top: 20px;
+`;
+
+
+const ListItem = styled.li`
+    margin-top: 20px;
+    text-align: justify;
+    font-family: 'LXGW WenKai Mono TC', sans-serif;
+    font-size: 1.25rem;
+    line-height: 2.0;
+    border-bottom: 2px solid ${({ theme }) => theme.highlightBorder};
+`;
+
+
+const SubList = styled.ul`
+    padding-left: 20px;
+    margin-bottom: 20px;
+`;
+
+
+const SubListItem = styled.li`
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family: 'LXGW WenKai Mono TC', sans-serif;
+    font-size: 1.0rem;
+    text-align: justify;
+    line-height: 2.0;
+`;
+
+
+function Referees() {
+    return (
+        <RefereesSection>
+            <Heading>
+                <Highlight>Referees</Highlight>
+                </Heading>
+            <List>
+                <ListItem>Dr Stephen Sikkink | Senior Scientist (CSS)</ListItem>
+                <SubList>
+                    <SubListItem>Project Supervisor (undergraduate and postgraduate)</SubListItem>
+                    <SubListItem>Contact: s.k.sikkink@bradford.ac.uk | (+44) 1274 232379</SubListItem>
+                </SubList>
+                <ListItem>Dr David Ansell | Assistant Professor</ListItem>
+                <SubList>
+                    <SubListItem>Personal Academic Tutor (PAT)</SubListItem>
+                    <SubListItem>Conatct: d.ansell@bradford.ac.uk | (+44) 1274 236521</SubListItem>
+                </SubList>
+            </List>
+        </RefereesSection>
+    );
+}
+
+
+export default Referees;
