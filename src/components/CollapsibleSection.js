@@ -23,7 +23,7 @@ const ToggleButton = styled.h2`
 
 
 const Content = styled.div`
-    max-height: ${({ isOpen }) => (isOpen ? '10000px' : '0')};
+    max-height: ${({ isOpen }) => (isOpen ? '20000px' : '0')};
     overflow: hidden;
     transition: max-height 0.4s ease;
     opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};
